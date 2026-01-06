@@ -1,0 +1,1 @@
+const express = require('express');\nconst bodyParser = require('body-parser');\nconst app = express();\nconst port = process.env.PORT || 3000;\nconst registrationRoutes = require('./routes/registrationRoutes');\n\napp.use(bodyParser.json());\napp.use('/api', registrationRoutes);\n\napp.listen(port, () => {\n  console.log(`Server running on port ${port}`);\n});

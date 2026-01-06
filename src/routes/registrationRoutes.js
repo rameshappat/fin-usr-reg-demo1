@@ -1,0 +1,1 @@
+const express = require('express');\nconst router = express.Router();\nconst registrationController = require('../controllers/registrationController');\n\nrouter.post('/register', registrationController.registerUser);\n\nmodule.exports = router;
